@@ -9,7 +9,7 @@
             ShowTopics();
             tecla = Console.ReadKey();
             Console.Clear();
-            switch(tecla.key)
+            switch(tecla.Key)
             {
                 case ConsoleKey.D1:
                     Topic1();
