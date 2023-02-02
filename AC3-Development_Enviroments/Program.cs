@@ -36,7 +36,7 @@ internal class Program
         Console.Clear();
         Console.WriteLine("Option 1: Cinema");
         Console.WriteLine("Option 2: Pokemon");
-        Console.WriteLine("Option 3: Books");
+        Console.WriteLine("Option 3: Game Of Thrones");
         Console.WriteLine("Option 0: Exit");
     }
     public static void Topic1()
@@ -143,7 +143,54 @@ internal class Program
     }
     public static void Topic3()
     {
-
+        int answ1, answ2, answ3, answ4, answ5, count = 0;
+        Console.WriteLine("Who is the rightful heir to the Iron Throne technically");
+        Console.WriteLine("1-Aegon Targaryen");
+        Console.WriteLine("2-Daenerys Targaryen");
+        Console.WriteLine("3-Gendry Baratheon");
+        Console.WriteLine("4-Joffrey Baratheon");
+        Console.Write("Reply with a number 1-4: ");
+        answ1 = Convert.ToInt32(Console.ReadLine());
+        if (answ1 == 3) count = count + 1;
+        Console.Clear();
+        Console.WriteLine("Who was Jon Snow mother?");
+        Console.WriteLine("1-Daenerys Targaryen");
+        Console.WriteLine("2-Catelyn Stark");
+        Console.WriteLine("3-Lyanna Stark");
+        Console.WriteLine("4-Johanna Snow");
+        Console.Write("Reply with a number 1-4: ");
+        answ2 = Convert.ToInt32(Console.ReadLine());
+        if (answ2 == 3) count = count + 1;
+        Console.Clear();
+        Console.WriteLine("Who was known as: The Spider");
+        Console.WriteLine("1-Lord Varys");
+        Console.WriteLine("2-Olenna Tyrell");
+        Console.WriteLine("3-Lord Petyr Baelish");
+        Console.WriteLine("4-Corlys Velaryon");
+        Console.Write("Reply with a number 1-4: ");
+        answ3 = Convert.ToInt32(Console.ReadLine());
+        if (answ3 == 1) count = count + 1;
+        Console.Clear();
+        Console.WriteLine("What's the name of the BIGGEST dragon known?");
+        Console.WriteLine("1-Drogon");
+        Console.WriteLine("2-Belarion");
+        Console.WriteLine("3-Vhagar");
+        Console.WriteLine("4-Caraxes");
+        Console.Write("Reply with a number 1-4: ");
+        answ4 = Convert.ToInt32(Console.ReadLine());
+        if (answ4 == 2) count = count + 1;
+        Console.Clear();
+        Console.WriteLine("Who's the father of Jaime, Tyrion and Cersei");
+        Console.WriteLine("1-Jorah Mormont");
+        Console.WriteLine("2-Eddard 'Ned' Stark");
+        Console.WriteLine("3-Robert Baratheon");
+        Console.WriteLine("4-Tywin Lannister");
+        Console.Write("Reply with a number 1-4: ");
+        answ5 = Convert.ToInt32(Console.ReadLine());
+        if (answ5 == 4) count = count + 1;
+        Console.Clear();
+        Console.WriteLine("You got {0} points! Each correct answer values 1 point", count);
+        MsgNextScreen("Press a key to go to the menu");
     }
     public static void MsgNextScreen(string msg)
     {
