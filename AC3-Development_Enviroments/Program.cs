@@ -252,6 +252,219 @@
 
         return tecla;
     }
-    
 
+    public static void Topic2()
+    {
+        Console.WriteLine("You choosed gaming quiz!");
+
+        ConsoleKeyInfo tecla;
+
+        tecla = GPregunta1();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        Console.ReadKey();
+        tecla = GPregunta2();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        tecla = GPregunta3();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = GPregunta4();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = GPregunta5();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        Console.ReadKey();
+
+
+    }
+
+    public static ConsoleKeyInfo GPregunta1()
+    {
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("1- What is the type of game CS:GO?");
+        Console.WriteLine(" ");
+        Console.WriteLine("1 - Open world");
+        Console.WriteLine("2 - Roleplay");
+        Console.WriteLine("3 - Shooter");
+        Console.WriteLine("4 - Races");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta2()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("2- In what game appears the character Mario??");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Fifa");
+        Console.WriteLine("B - Valorant");
+        Console.WriteLine("C - League of legends");
+        Console.WriteLine("D - Super Smash Bros");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta3()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("3 - Of what game is the Esports tournament LEC ");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Counter Strike");
+        Console.WriteLine("B - League of Legends");
+        Console.WriteLine("C - Call of duty");
+        Console.WriteLine("D - TFT");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta4()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("4 - What game is the most buyed in history?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Minceraft");
+        Console.WriteLine("B - Terraria");
+        Console.WriteLine("C - Tetris");
+        Console.WriteLine("D - GTA V");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta5()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("5 - What game of Steam was with the most players at same time?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Dota 2");
+        Console.WriteLine("B - Valheim");
+        Console.WriteLine("C - PUBG");
+        Console.WriteLine("D - Among Us");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+
+    
 }
