@@ -15,10 +15,10 @@
                     Topic1();
                     break;
                 case ConsoleKey.D2:
-                    //Topic2();
+                    Topic2();
                     break;
                 case ConsoleKey.D3:
-                    //Topic3();
+                    Topic3();
                     break;
                 case ConsoleKey.D0:
                     //MsgNextScreen();
@@ -465,6 +465,218 @@
 
         return tecla;
     }
+    public static void Topic3()
+    {
+        Console.WriteLine("You choosed music quiz!");
 
-    
+        ConsoleKeyInfo tecla;
+
+        tecla = MPregunta1();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+
+        Console.ReadKey();
+        tecla = MPregunta2();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta3();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta4();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta5();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        Console.ReadKey();
+
+
+    }
+
+    public static ConsoleKeyInfo MPregunta1()
+    {
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("1- Which of these bands was led by a singer from Africa?");
+        Console.WriteLine(" ");
+        Console.WriteLine("1 - Jonas Brothers");
+        Console.WriteLine("2 - the Who");
+        Console.WriteLine("3 - the Beatles");
+        Console.WriteLine("4 - Queen");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta2()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("2- Which of these musical movements did Ludwig van Beethoven help introduce?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Romanticism");
+        Console.WriteLine("B - lyricism");
+        Console.WriteLine("C - Classicism");
+        Console.WriteLine("D - idealism");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta3()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("3 - Which of these is not a true horn?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - trombone");
+        Console.WriteLine("B - cornet");
+        Console.WriteLine("C - English horn");
+        Console.WriteLine("D - French horn");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta4()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("4 - Where is it thought that the banjo originated?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Africa");
+        Console.WriteLine("B - New York City");
+        Console.WriteLine("C - Bangladesh");
+        Console.WriteLine("D - Coolsville");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta5()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("5 - Which of the following instruments does not employ valves to change pitch?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - trombone");
+        Console.WriteLine("B - trumpet");
+        Console.WriteLine("C - flute");
+        Console.WriteLine("D - flugelhorn");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+
 }
