@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
@@ -11,7 +9,7 @@ internal class Program
             ShowTopics();
             tecla = Console.ReadKey();
             Console.Clear();
-            switch(tecla.Key)
+            switch (tecla.Key)
             {
                 case ConsoleKey.D1:
                     Topic1();
@@ -23,10 +21,10 @@ internal class Program
                     Topic3();
                     break;
                 case ConsoleKey.D0:
-                    MsgNextScreen("Press a key to exit.");
+                    //MsgNextScreen();
                     break;
                 default:
-                    MsgNextScreen("ERROR. Press a key to go back to the menu");
+                    //MsgNextScreen();
                     break;
             }
         } while (tecla.Key != ConsoleKey.D0);
@@ -34,167 +32,651 @@ internal class Program
     public static void ShowTopics()
     {
         Console.Clear();
-        Console.WriteLine("Option 1: Cinema");
-        Console.WriteLine("Option 2: Pokemon");
-        Console.WriteLine("Option 3: Game Of Thrones");
-        Console.WriteLine("Option 0: Exit");
+        Console.WriteLine("PLEASE SELECT THE TOPIC OF THE QUIZ");
+        Console.WriteLine(" ");
+        Console.WriteLine("1 - Football");
+        Console.WriteLine("2 - Videogames");
+        Console.WriteLine("3 - Music");
+        Console.WriteLine("0 - EXIT");
     }
+
     public static void Topic1()
     {
-        int answ1, answ2, answ3, answ4, answ5, count=0;
-        Console.WriteLine("In which of these films Brad Pitt DOESN'T appear");
-        Console.WriteLine("1-Fight Club");
-        Console.WriteLine("2-Bullet Train");
-        Console.WriteLine("3-Ad Astra");
-        Console.WriteLine("4-The wolf of wall street"); //correct
-        Console.Write("Reply with a number 1-4: ");
-        answ1 = Convert.ToInt32(Console.ReadLine());
-        if (answ1==4) count = count + 1;
+        Console.WriteLine("You choosed football quiz!");
+
+        ConsoleKeyInfo tecla;
+
+        tecla = FPregunta1();
         Console.Clear();
-        Console.WriteLine("In which of these films WAS directed by Tarantino");
-        Console.WriteLine("1-Mary Poppins");
-        Console.WriteLine("2-Pulp fiction"); //correct
-        Console.WriteLine("3-Interestellar");
-        Console.WriteLine("4-Avatar 2: The Way of The Water");
-        Console.Write("Reply with a number 1-4: ");
-        answ2 = Convert.ToInt32(Console.ReadLine());
-        if (answ2 == 2) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        Console.ReadKey();
+        tecla = FPregunta2();
         Console.Clear();
-        Console.WriteLine("WHO gives voice to the Puss in Boots");
-        Console.WriteLine("1-Pedro Pascal");
-        Console.WriteLine("2-Matt Damon");
-        Console.WriteLine("3-Leonardo DiCaprio");
-        Console.WriteLine("4-Antonio Banderas"); //correct
-        Console.Write("Reply with a number 1-4: ");
-        answ3 = Convert.ToInt32(Console.ReadLine());
-        if (answ3 == 4) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        tecla = FPregunta3();
         Console.Clear();
-        Console.WriteLine("In which of these films Jake Gyenhall DOESN'T appear");
-        Console.WriteLine("1-Nightcrawler");
-        Console.WriteLine("2-Donnie Darko");
-        Console.WriteLine("3-American Psycho"); //correct
-        Console.WriteLine("4-Prisoners");
-        Console.Write("Reply with a number 1-4: ");
-        answ4 = Convert.ToInt32(Console.ReadLine());
-        if (answ4 == 3) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = FPregunta4();
         Console.Clear();
-        Console.WriteLine("Who preformed Batman in the LASTEST Batman film");
-        Console.WriteLine("1-Christian Bale");
-        Console.WriteLine("2-Ben Affleck");
-        Console.WriteLine("3-Robert Pattinson"); //correct
-        Console.WriteLine("4-Dwayne 'The Rock' Johnson");
-        Console.Write("Reply with a number 1-4: ");
-        answ5 = Convert.ToInt32(Console.ReadLine());
-        if (answ5 == 3) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = FPregunta5();
         Console.Clear();
-        Console.WriteLine("You got {0} points! Each correct answer values 1 point", count);
-        MsgNextScreen("Press a key to go to the menu");
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        Console.ReadKey();
+
+
     }
+
+    public static ConsoleKeyInfo FPregunta1()
+    {
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("1- Who is the player with most goals of all time?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Lionel Messi");
+        Console.WriteLine("B - Cristiano Ronaldo");
+        Console.WriteLine("C - Neymar JR");
+        Console.WriteLine("D - Erling Halland");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo FPregunta2()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("2- Who was the latest player to win the ballon d'or?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Kylian Mbappe");
+        Console.WriteLine("B - Lionel Messi");
+        Console.WriteLine("C - Robert Lewandowski");
+        Console.WriteLine("D - Karim Benzema");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo FPregunta3()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("3 - What team was the winner of the last LaLiga and Champions League?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Real Betis");
+        Console.WriteLine("B - FC Barcelona");
+        Console.WriteLine("C - Real Madrid");
+        Console.WriteLine("D - Atletico Madrid");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo FPregunta4()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("4 - Who is the player with the most balon d'or?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Lionel Messi");
+        Console.WriteLine("B - Pelé");
+        Console.WriteLine("C - Johan Cruyff");
+        Console.WriteLine("D - Cristiano Ronaldo");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo FPregunta5()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("5 - What nation team has the most World cups?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - France");
+        Console.WriteLine("B - Argentina");
+        Console.WriteLine("C - Uruguay");
+        Console.WriteLine("D - Brasil");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+
     public static void Topic2()
     {
-        int answ1, answ2, answ3, answ4, answ5, count = 0;
-        Console.WriteLine("What is Pikachu type?");
-        Console.WriteLine("1-Electric"); //correct
-        Console.WriteLine("2-Flying");
-        Console.WriteLine("3-Electric - Water");
-        Console.WriteLine("4-Fire");
-        Console.Write("Reply with a number 1-4: ");
-        answ1 = Convert.ToInt32(Console.ReadLine());
-        if (answ1 == 1) count = count + 1;
+        Console.WriteLine("You choosed gaming quiz!");
+
+        ConsoleKeyInfo tecla;
+
+        tecla = GPregunta1();
         Console.Clear();
-        Console.WriteLine("Which one is NOT a starter pokemon?");
-        Console.WriteLine("1-Charmander");
-        Console.WriteLine("2-Bulbasaur");
-        Console.WriteLine("3-Staryu"); //correct
-        Console.WriteLine("4-Squirtle");
-        Console.Write("Reply with a number 1-4: ");
-        answ2 = Convert.ToInt32(Console.ReadLine());
-        if (answ2 == 3) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        Console.ReadKey();
+        tecla = GPregunta2();
         Console.Clear();
-        Console.WriteLine("What's the name of the protagonist");
-        Console.WriteLine("1-Ash Ketchum"); //correct
-        Console.WriteLine("2-Brant Peterson");
-        Console.WriteLine("3-Peter Parker");
-        Console.WriteLine("4-Pikachu");
-        Console.Write("Reply with a number 1-4: ");
-        answ3 = Convert.ToInt32(Console.ReadLine());
-        if (answ3 == 1) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        tecla = GPregunta3();
         Console.Clear();
-        Console.WriteLine("Which one of this pokemon IS legendary");
-        Console.WriteLine("1-Mewtwo"); //correct
-        Console.WriteLine("2-Charizard");
-        Console.WriteLine("3-Pikachu");
-        Console.WriteLine("4-Quilava");
-        Console.Write("Reply with a number 1-4: ");
-        answ4 = Convert.ToInt32(Console.ReadLine());
-        if (answ4 == 1) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = GPregunta4();
         Console.Clear();
-        Console.WriteLine("Which one is NOT a pokemon game title");
-        Console.WriteLine("1-Pokemon Fire Red");
-        Console.WriteLine("2-Pokemon Water Blue"); //correct
-        Console.WriteLine("3-Pokemon Leaf Green");
-        Console.WriteLine("4-Pokemon SoulSilver");
-        Console.Write("Reply with a number 1-4: ");
-        answ5 = Convert.ToInt32(Console.ReadLine());
-        if (answ5 == 2) count = count + 1;
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = GPregunta5();
         Console.Clear();
-        Console.WriteLine("You got {0} points! Each correct answer values 1 point", count);
-        MsgNextScreen("Press a key to go to the menu");
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        Console.ReadKey();
+
+
+    }
+
+    public static ConsoleKeyInfo GPregunta1()
+    {
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("1- What is the type of game CS:GO?");
+        Console.WriteLine(" ");
+        Console.WriteLine("1 - Open world");
+        Console.WriteLine("2 - Roleplay");
+        Console.WriteLine("3 - Shooter");
+        Console.WriteLine("4 - Races");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta2()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("2- In what game appears the character Mario??");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Fifa");
+        Console.WriteLine("B - Valorant");
+        Console.WriteLine("C - League of legends");
+        Console.WriteLine("D - Super Smash Bros");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta3()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("3 - Of what game is the Esports tournament LEC ");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Counter Strike");
+        Console.WriteLine("B - League of Legends");
+        Console.WriteLine("C - Call of duty");
+        Console.WriteLine("D - TFT");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta4()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("4 - What game is the most buyed in history?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Minceraft");
+        Console.WriteLine("B - Terraria");
+        Console.WriteLine("C - Tetris");
+        Console.WriteLine("D - GTA V");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo GPregunta5()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("5 - What game of Steam was with the most players at same time?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Dota 2");
+        Console.WriteLine("B - Valheim");
+        Console.WriteLine("C - PUBG");
+        Console.WriteLine("D - Among Us");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
     }
     public static void Topic3()
     {
-        int answ1, answ2, answ3, answ4, answ5, count = 0;
-        Console.WriteLine("Who is the rightful heir to the Iron Throne technically");
-        Console.WriteLine("1-Aegon Targaryen");
-        Console.WriteLine("2-Daenerys Targaryen");
-        Console.WriteLine("3-Gendry Baratheon"); //correct
-        Console.WriteLine("4-Joffrey Baratheon");
-        Console.Write("Reply with a number 1-4: ");
-        answ1 = Convert.ToInt32(Console.ReadLine());
-        if (answ1 == 3) count = count + 1;
+        Console.WriteLine("You choosed music quiz!");
+
+        ConsoleKeyInfo tecla;
+
+        tecla = MPregunta1();
         Console.Clear();
-        Console.WriteLine("Who was Jon Snow mother?");
-        Console.WriteLine("1-Daenerys Targaryen");
-        Console.WriteLine("2-Catelyn Stark");
-        Console.WriteLine("3-Lyanna Stark"); //correct
-        Console.WriteLine("4-Johanna Snow");
-        Console.Write("Reply with a number 1-4: ");
-        answ2 = Convert.ToInt32(Console.ReadLine());
-        if (answ2 == 3) count = count + 1;
-        Console.Clear();
-        Console.WriteLine("Who was known as: The Spider");
-        Console.WriteLine("1-Lord Varys"); //correct
-        Console.WriteLine("2-Olenna Tyrell");
-        Console.WriteLine("3-Lord Petyr Baelish");
-        Console.WriteLine("4-Corlys Velaryon");
-        Console.Write("Reply with a number 1-4: ");
-        answ3 = Convert.ToInt32(Console.ReadLine());
-        if (answ3 == 1) count = count + 1;
-        Console.Clear();
-        Console.WriteLine("What's the name of the BIGGEST dragon known?");
-        Console.WriteLine("1-Drogon");
-        Console.WriteLine("2-Balerion"); //correct
-        Console.WriteLine("3-Vhagar");
-        Console.WriteLine("4-Caraxes");
-        Console.Write("Reply with a number 1-4: ");
-        answ4 = Convert.ToInt32(Console.ReadLine());
-        if (answ4 == 2) count = count + 1;
-        Console.Clear();
-        Console.WriteLine("Who's the father of Jaime, Tyrion and Cersei");
-        Console.WriteLine("1-Jorah Mormont");
-        Console.WriteLine("2-Eddard 'Ned' Stark");
-        Console.WriteLine("3-Robert Baratheon");
-        Console.WriteLine("4-Tywin Lannister"); //correct
-        Console.Write("Reply with a number 1-4: ");
-        answ5 = Convert.ToInt32(Console.ReadLine());
-        if (answ5 == 4) count = count + 1;
-        Console.Clear();
-        Console.WriteLine("You got {0} points! Each correct answer values 1 point", count);
-        MsgNextScreen("Press a key to go to the menu");
-    }
-    public static void MsgNextScreen(string msg)
-    {
-        Console.WriteLine(msg);
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+
         Console.ReadKey();
+        tecla = MPregunta2();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta3();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta4();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Correct!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Incorrect!");
+                break;
+
+        }
+        tecla = MPregunta5();
+        Console.Clear();
+
+        switch (tecla.Key)
+        {
+            case ConsoleKey.A:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.B:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.C:
+                Console.WriteLine("Incorrect!");
+                break;
+
+            case ConsoleKey.D:
+                Console.WriteLine("Correct!");
+                break;
+
+        }
+        Console.ReadKey();
+
+
     }
+
+    public static ConsoleKeyInfo MPregunta1()
+    {
+        Console.WriteLine("Press any key to start");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("1- Which of these bands was led by a singer from Africa?");
+        Console.WriteLine(" ");
+        Console.WriteLine("1 - Jonas Brothers");
+        Console.WriteLine("2 - the Who");
+        Console.WriteLine("3 - the Beatles");
+        Console.WriteLine("4 - Queen");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta2()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("2- Which of these musical movements did Ludwig van Beethoven help introduce?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Romanticism");
+        Console.WriteLine("B - lyricism");
+        Console.WriteLine("C - Classicism");
+        Console.WriteLine("D - idealism");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta3()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("3 - Which of these is not a true horn?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - trombone");
+        Console.WriteLine("B - cornet");
+        Console.WriteLine("C - English horn");
+        Console.WriteLine("D - French horn");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta4()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("4 - Where is it thought that the banjo originated?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - Africa");
+        Console.WriteLine("B - New York City");
+        Console.WriteLine("C - Bangladesh");
+        Console.WriteLine("D - Coolsville");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+    public static ConsoleKeyInfo MPregunta5()
+    {
+        Console.WriteLine("Press any key to continue");
+        Console.ReadKey();
+        Console.Clear();
+
+        Console.WriteLine("5 - Which of the following instruments does not employ valves to change pitch?");
+        Console.WriteLine(" ");
+        Console.WriteLine("A - trombone");
+        Console.WriteLine("B - trumpet");
+        Console.WriteLine("C - flute");
+        Console.WriteLine("D - flugelhorn");
+
+        ConsoleKeyInfo tecla;
+        tecla = Console.ReadKey();
+
+        return tecla;
+    }
+
 }
